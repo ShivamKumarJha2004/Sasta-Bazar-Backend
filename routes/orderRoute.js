@@ -1,7 +1,10 @@
 import express from "express"
-import getProductByCategoryID from "../controllers/productController.js";
+import {createTransaction,  createOrder , getOrderByUserId} from "../controllers/orderController.js";
 
 const OrderRouter=express.Router();
 
-router.post('',getProductByCategoryID)
+OrderRouter.post('/transaction',createTransaction)
+OrderRouter.post('/',createOrder)
+OrderRouter.get('/:userid',getOrderByUserId)
+
 export default OrderRouter;

@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose"
 
 const productSchema = new Schema({
     name: { type: String, required: true },
-    imageUrl: { type: String, required: true },
+    image_uri: { type: String ,required:true},
     description: { type: String },
     price:{type:Number,required:true},
     ar_url:{type:String},
@@ -11,5 +11,5 @@ const productSchema = new Schema({
     updatedAt: { type: Date, default: Date.now }
 
 })
-const Product = mongoose.model("product", userSchema)
+const Product = mongoose.model("product", productSchema)
 export default Product;

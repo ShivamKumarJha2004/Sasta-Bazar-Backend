@@ -3,6 +3,6 @@ import { getUser, userSignup } from "../controllers/userController.js";
 
 const UserRouter=express.Router();
 
-router.get('/', getUser);
-router.post('/register',userSignup)
+UserRouter.get('/', getUser);
+UserRouter.post('/register',userSignup)
 export default UserRouter;

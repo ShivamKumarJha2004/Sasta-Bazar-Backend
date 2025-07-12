@@ -31,5 +31,5 @@ const transactionSchema = new Schema({
     updatedAt: { type: Date, default: Date.now }
 
 })
-const Transaction = mongoose.model("product", userSchema)
-export default Product;
+const Transaction = mongoose.model("transaction", transactionSchema)
+export default Transaction;
